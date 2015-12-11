@@ -1,0 +1,17 @@
+r1=10000;
+r2=14000;
+r3=r2;
+pa=4320;
+pb=3600;
+pc=2880;
+
+A=[r1,0,0,1;0,r2,0,-1;0,0,r3,-1;1,-1,-1,0]; 
+
+b=[pa;-pb;-pc;0];
+
+x=inv(A)*b;                   %para hallar las incognitas multiplico el vector b por la inversa de a
+
+q1=x(1),disp('ft^3sec')          %primer valor de x corresponde a q1 con unidades
+q2=x(2),disp('ft^3sec')          %segundo valor de x corresponde a q2  ''  
+q3=x(3),disp('ft^3sec')          %tercer valor de x corresponde a q3   '' 
+p1=x(4),disp('lb/ft^2')          %cuarto valor de x corresponde a p1   ''          
